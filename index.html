@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="az">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixStudio Pro | Next-Gen Image Engine</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Glow Effect Backgrounds -->
+    <div class="blob-c">
+        <div class="shape-blob"></div>
+        <div class="shape-blob one"></div>
+        <div class="shape-blob two"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">PIX<span>STUDIO</span></div>
+            <div class="nav-links">
+                <a href="#tools">Alətlər</a>
+                <a href="#pricing">Tariflər</a>
+                <button class="btn-premium" onclick="window.location.href='#pricing'">Upgrade Pro</button>
+            </div>
+            <div class="burger" onclick="toggleMenu()">
+                <span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1 class="reveal-text">Şəkilləri <span>Süni İntellekt</span> Gücü ilə İdarə Edin</h1>
+                <p class="fade-in">Mürəkkəb redaktə proseslərini saniyələrə endirdik. Professional nəticə, sıfır zəhmət.
+                </p>
+                <div class="hero-actions">
+                    <button class="btn-glow" onclick="document.getElementById('bgInput').click()">Başla</button>
+                    <span class="sub-text">Tamamilə pulsuz sınaq paketi mövcuddur</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="tools" class="tools-section">
+            <div class="tool-grid">
+                <!-- BG Remover -->
+                <div class="tool-card glass">
+                    <div class="tool-info">
+                        <span class="tag">AI Engine v2</span>
+                        <h3>Arxa Plan Silmə</h3>
+                        <p>Nöqsansız kəsimlər və şəffaf fonlar.</p>
+                    </div>
+                    <input type="file" id="bgInput" hidden accept="image/*">
+                    <button class="action-btn" onclick="document.getElementById('bgInput').click()">Şəkil Yüklə</button>
+                </div>
+
+                <!-- Converter -->
+                <div class="tool-card glass">
+                    <div class="tool-info">
+                        <span class="tag">Multi-Format</span>
+                        <h3>Smart Convert</h3>
+                        <p>Bütün populyar formatlar arası itkisiz keçid.</p>
+                    </div>
+                    <div class="tool-footer">
+                        <br>
+                        <!-- Genişləndirilmiş Seçim Menyusu -->
+                        <div class="custom-select-wrapper">
+                            <select id="formatSelect" class="styled-select">
+                                <option value="image/png">PNG — Portable Network Graphics</option>
+                                <option value="image/jpeg">JPG — Joint Photographic Group</option>
+                                <option value="image/webp">WEBP — Google Web Format</option>
+                                <option value="image/avif">AVIF — Next-Gen Compression</option>
+                                <option value="image/bmp">BMP — Bitmap Image</option>
+                                <option value="image/tiff">TIFF — High Quality Print</option>
+                            </select>
+                        </div>
+                        <input type="file" id="convertInput" hidden accept="image/*">
+                        <button class="action-btn secondary"
+                            onclick="document.getElementById('convertInput').click()">Faylı Seç və Çevir</button>
+                    </div>
+                </div>
+                <!-- Monoxrom Filtr Kartı -->
+                <div class="tool-card glass">
+                    <div class="tool-info">
+                        <span class="tag">Studio Effect</span>
+                        <h3>B&W Monoxrom</h3>
+                        <p>Şəkillərinizə dramatik və professional ağ-qara görünüşü verin.</p>
+                    </div>
+                    <div class="tool-footer">
+                        <input type="file" id="bwInput" hidden accept="image/*">
+                        <button class="action-btn" onclick="document.getElementById('bwInput').click()">Filtr Tətbiq
+                            Et</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="pricing-area">
+            <div class="section-header">
+                <h2>Özəl Planınızı Seçin</h2>
+            </div>
+            <div class="price-wrapper">
+                <div class="p-card glass">
+                    <h4>Starter</h4>
+                    <div class="amount">0₼</div>
+                    <ul>
+                        <li>5 Şəkil/gün</li>
+                        <li>Standard sürət</li>
+                    </ul>
+                    <button class="p-btn">Hazırkı Plan</button>
+                </div>
+                <div class="p-card glass featured">
+                    <div class="best-value">Best Choice</div>
+                    <h4>Pro</h4>
+                    <div class="amount">19₼<span>/ay</span></div>
+                    <ul>
+                        <li>Limitsiz emal</li>
+                        <li>HD Keyfiyyət</li>
+                        <li>Sürətli bulut emalı</li>
+                    </ul>
+                    <button class="p-btn active">İndi Al</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
