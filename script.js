@@ -68,3 +68,23 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+function toggleMenu() {
+    const nav = document.querySelector('.nav-links');
+    const burger = document.querySelector('.burger');
+    
+    // Menyunun açılıb-bağlanması
+    nav.classList.toggle('active');
+    
+    // Hamburgerin X-ə çevrilməsi
+    burger.classList.toggle('toggle');
+}
+
+// Linklərə basdıqda menyunun bağlanması (UX üçün vacibdir)
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        const nav = document.querySelector('.nav-links');
+        const burger = document.querySelector('.burger');
+        nav.classList.remove('active');
+        burger.classList.remove('toggle');
+    });
+});
